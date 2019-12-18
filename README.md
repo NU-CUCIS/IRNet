@@ -15,12 +15,12 @@ IRNet is a general purpose deep residual regression framework that contains mode
 
 ## Citation
 
-D. Jha, L. Ward, A. Paul, W.-keng Liao, A. Choudhary, C. Wolverton, and A. Agrawal, "IRNet: A general purpose deep residual regression framework for materials discovery." Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 2019 [DOI:10.1145/3292500.3330703] [<a href="http://delivery.acm.org/10.1145/3340000/3330703/p2385-jha.pdf">PDF</a>].
+D. Jha, L. Ward, Z. Yang, C. Wovertong, I. Foster, W.-keng Liao, A. Choudhary, and A. Agrawal, "IRNet: A general purpose deep residual regression framework for materials discovery." Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 2019 [DOI:10.1145/3292500.3330703] [<a href="http://delivery.acm.org/10.1145/3340000/3330703/p2385-jha.pdf">PDF</a>].
 
 
 ## Questions/Comments
 
-email: dipendra.jha@eecs.northwestern.edu or ankitag@eecs.northwestern.edue</br>
+email: dipendra.jha@eecs.northwestern.edu or ankitag@eecs.northwestern.edu</br>
 Copyright (C) 2019, Northwestern University.<br/>
 See COPYRIGHT notice in top-level directory.
 
