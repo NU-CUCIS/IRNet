@@ -1,0 +1,235 @@
+
+2020-01-05 13:10:12.185489:job config: {u'loss_type': u'mae', u'use_valid': False, u'config_file': u'sample/job.config', 'log_folder': u'sample', 'test_metric': u'mae', u'paramsGrid': {u'patience': 200, u'learning_rate': 0.0001, u'optimizer': u'Adam', u'EVAL_FREQUENCY': 1000}, u'input_types': [u'physical_atts'], 'train_data_path': u'training-data/sample_train_set.csv', 'input_type': None, 'test_data_path': u'training-data/sample_test_set.csv', 'label': u'delta_e', u'project': u'IRNet', u'regressors': None, 'architecture': u'1024BARx4-512BARx3-256BARx3-128BARx3-64BARx2-32BARx1-1', u'save_path': u'sample/sample_model', 'log_file': u'sample.log', u'model_path': None}
+2020-01-05 13:10:12.185553:train data path is  training-data/sample_train_set.csv
+2020-01-05 13:10:12.347385:input attribute sets are:  [u'physical_atts']
+2020-01-05 13:10:12.347457:test data path is  training-data/sample_test_set.csv
+2020-01-05 13:10:12.367609:input attributes are:  ['0-norm', '2-norm', '3-norm', '5-norm', '7-norm', '10-norm', 'minimum Number', 'maximum Number', 'range Number', 'mean Number', 'avg_dev Number', 'mode Number', 'minimum MendeleevNumber', 'maximum MendeleevNumber', 'range MendeleevNumber', 'mean MendeleevNumber', 'avg_dev MendeleevNumber', 'mode MendeleevNumber', 'minimum AtomicWeight', 'maximum AtomicWeight', 'range AtomicWeight', 'mean AtomicWeight', 'avg_dev AtomicWeight', 'mode AtomicWeight', 'minimum MeltingT', 'maximum MeltingT', 'range MeltingT', 'mean MeltingT', 'avg_dev MeltingT', 'mode MeltingT', 'minimum Column', 'maximum Column', 'range Column', 'mean Column', 'avg_dev Column', 'mode Column', 'minimum Row', 'maximum Row', 'range Row', 'mean Row', 'avg_dev Row', 'mode Row', 'minimum CovalentRadius', 'maximum CovalentRadius', 'range CovalentRadius', 'mean CovalentRadius', 'avg_dev CovalentRadius', 'mode CovalentRadius', 'minimum Electronegativity', 'maximum Electronegativity', 'range Electronegativity', 'mean Electronegativity', 'avg_dev Electronegativity', 'mode Electronegativity', 'minimum NsValence', 'maximum NsValence', 'range NsValence', 'mean NsValence', 'avg_dev NsValence', 'mode NsValence', 'minimum NpValence', 'maximum NpValence', 'range NpValence', 'mean NpValence', 'avg_dev NpValence', 'mode NpValence', 'minimum NdValence', 'maximum NdValence', 'range NdValence', 'mean NdValence', 'avg_dev NdValence', 'mode NdValence', 'minimum NfValence', 'maximum NfValence', 'range NfValence', 'mean NfValence', 'avg_dev NfValence', 'mode NfValence', 'minimum NValence', 'maximum NValence', 'range NValence', 'mean NValence', 'avg_dev NValence', 'mode NValence', 'minimum NsUnfilled', 'maximum NsUnfilled', 'range NsUnfilled', 'mean NsUnfilled', 'avg_dev NsUnfilled', 'mode NsUnfilled', 'minimum NpUnfilled', 'maximum NpUnfilled', 'range NpUnfilled', 'mean NpUnfilled', 'avg_dev NpUnfilled', 'mode NpUnfilled', 'minimum NdUnfilled', 'maximum NdUnfilled', 'range NdUnfilled', 'mean NdUnfilled', 'avg_dev NdUnfilled', 'mode NdUnfilled', 'minimum NfUnfilled', 'maximum NfUnfilled', 'range NfUnfilled', 'mean NfUnfilled', 'avg_dev NfUnfilled', 'mode NfUnfilled', 'minimum NUnfilled', 'maximum NUnfilled', 'range NUnfilled', 'mean NUnfilled', 'avg_dev NUnfilled', 'mode NUnfilled', 'minimum GSvolume_pa', 'maximum GSvolume_pa', 'range GSvolume_pa', 'mean GSvolume_pa', 'avg_dev GSvolume_pa', 'mode GSvolume_pa', 'minimum GSbandgap', 'maximum GSbandgap', 'range GSbandgap', 'mean GSbandgap', 'avg_dev GSbandgap', 'mode GSbandgap', 'minimum GSmagmom', 'maximum GSmagmom', 'range GSmagmom', 'mean GSmagmom', 'avg_dev GSmagmom', 'mode GSmagmom', 'minimum SpaceGroupNumber', 'maximum SpaceGroupNumber', 'range SpaceGroupNumber', 'mean SpaceGroupNumber', 'avg_dev SpaceGroupNumber', 'mode SpaceGroupNumber', 'avg s valence electrons', 'avg p valence electrons', 'avg d valence electrons', 'avg f valence electrons', 'compound possible', 'max ionic char', 'avg ionic char']
+2020-01-05 13:10:12.367654:label: delta_e
+2020-01-05 13:10:13.085981: train, test, valid sizes:  (8316, 145) (8316,) (924, 145) (924,) (924, 145) (924,)
+2020-01-05 13:10:13.106370:train matrix shape of train_X:  (8316, 145)  train_y:  (8316,)
+2020-01-05 13:10:13.106464:valid matrix shape of train_X:  (924, 145)  valid_y:  (924,)
+2020-01-05 13:10:13.106504:test matrix shape of valid_X:   (924, 145)  test_y:  (924,)
+2020-01-05 13:10:13.106539:architecture is:  1024BARx4-512BARx3-256BARx3-128BARx3-64BARx2-32BARx1-1
+2020-01-05 13:10:13.106596:learning rate is  0.0001
+2020-01-05 13:10:13.107916:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:13.136323:adding residual with fc as the size are different
+2020-01-05 13:10:13.145798:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:13.173185:adding residual, both sizes are same
+2020-01-05 13:10:13.173827:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:13.202616:adding residual, both sizes are same
+2020-01-05 13:10:13.203070:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:13.231063:adding residual, both sizes are same
+2020-01-05 13:10:13.231538:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:13.258954:adding residual with fc as the size are different
+2020-01-05 13:10:13.268595:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:13.296646:adding residual, both sizes are same
+2020-01-05 13:10:13.297105:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:13.324614:adding residual, both sizes are same
+2020-01-05 13:10:13.325089:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:13.352658:adding residual with fc as the size are different
+2020-01-05 13:10:13.362329:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:13.390898:adding residual, both sizes are same
+2020-01-05 13:10:13.391361:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:13.418875:adding residual, both sizes are same
+2020-01-05 13:10:13.419353:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:13.446962:adding residual with fc as the size are different
+2020-01-05 13:10:13.457060:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:13.484638:adding residual, both sizes are same
+2020-01-05 13:10:13.485099:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:13.512688:adding residual, both sizes are same
+2020-01-05 13:10:13.513161:adding fully connected layers with 64 outputs followed by batch_norm and act
+2020-01-05 13:10:13.541192:adding residual with fc as the size are different
+2020-01-05 13:10:13.550853:adding fully connected layers with 64 outputs followed by batch_norm and act
+2020-01-05 13:10:13.578685:adding residual, both sizes are same
+2020-01-05 13:10:13.579168:adding fully connected layers with 32 outputs followed by batch_norm and act
+2020-01-05 13:10:13.606784:adding residual with fc as the size are different
+2020-01-05 13:10:13.616894:adding final layer with 1 output
+2020-01-05 13:10:14.546032:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:14.555220:adding residual with fc as the size are different
+2020-01-05 13:10:14.557498:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:14.566427:adding residual, both sizes are same
+2020-01-05 13:10:14.566891:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:14.575933:adding residual, both sizes are same
+2020-01-05 13:10:14.576389:adding fully connected layers with 1024 outputs followed by batch_norm and act
+2020-01-05 13:10:14.585876:adding residual, both sizes are same
+2020-01-05 13:10:14.586353:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:14.595273:adding residual with fc as the size are different
+2020-01-05 13:10:14.597554:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:14.606490:adding residual, both sizes are same
+2020-01-05 13:10:14.606952:adding fully connected layers with 512 outputs followed by batch_norm and act
+2020-01-05 13:10:14.615874:adding residual, both sizes are same
+2020-01-05 13:10:14.616343:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:14.625417:adding residual with fc as the size are different
+2020-01-05 13:10:14.627744:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:14.636640:adding residual, both sizes are same
+2020-01-05 13:10:14.637097:adding fully connected layers with 256 outputs followed by batch_norm and act
+2020-01-05 13:10:14.646007:adding residual, both sizes are same
+2020-01-05 13:10:14.646481:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:14.655411:adding residual with fc as the size are different
+2020-01-05 13:10:14.657679:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:14.666606:adding residual, both sizes are same
+2020-01-05 13:10:14.667069:adding fully connected layers with 128 outputs followed by batch_norm and act
+2020-01-05 13:10:14.675983:adding residual, both sizes are same
+2020-01-05 13:10:14.676450:adding fully connected layers with 64 outputs followed by batch_norm and act
+2020-01-05 13:10:14.685393:adding residual with fc as the size are different
+2020-01-05 13:10:14.687671:adding fully connected layers with 64 outputs followed by batch_norm and act
+2020-01-05 13:10:14.697011:adding residual, both sizes are same
+2020-01-05 13:10:14.697483:adding fully connected layers with 32 outputs followed by batch_norm and act
+2020-01-05 13:10:14.706445:adding residual with fc as the size are different
+2020-01-05 13:10:14.708836:adding final layer with 1 output
+2020-01-05 13:10:16.757125:Initialized
+2020-01-05 13:10:17.014927:model path is  None
+2020-01-05 13:10:17.015012:start training
+2020-01-05 13:10:18.068809:Step 0 (epoch 00), 3.2 s minibatch loss: 427.69034, validation error: 554.72064, test error: 554.72064, best validation error: 100.00000
+2020-01-05 13:10:25.837224:Model saved at: sample/sample_model
+2020-01-05 13:10:25.850407:Step 1000 (epoch 03), 7.2 s minibatch loss: 8.19057, validation error: 6.76753, test error: 6.76753, best validation error: 6.76753
+2020-01-05 13:10:33.509463:Model saved at: sample/sample_model
+2020-01-05 13:10:33.523315:Step 2000 (epoch 07), 7.1 s minibatch loss: 7.91879, validation error: 1.87368, test error: 1.87368, best validation error: 1.87368
+2020-01-05 13:10:41.424045:Model saved at: sample/sample_model
+2020-01-05 13:10:41.437770:Step 3000 (epoch 11), 7.3 s minibatch loss: 2.05512, validation error: 1.25226, test error: 1.25226, best validation error: 1.25226
+2020-01-05 13:10:48.731315:Step 4000 (epoch 15), 7.2 s minibatch loss: 2.48088, validation error: 2.03754, test error: 2.03754, best validation error: 1.25226
+2020-01-05 13:10:56.510587:Model saved at: sample/sample_model
+2020-01-05 13:10:56.524260:Step 5000 (epoch 19), 7.2 s minibatch loss: 0.81823, validation error: 0.78475, test error: 0.78475, best validation error: 0.78475
+2020-01-05 13:11:04.520568:Model saved at: sample/sample_model
+2020-01-05 13:11:04.533143:Step 6000 (epoch 23), 7.4 s minibatch loss: 0.78625, validation error: 0.75491, test error: 0.75491, best validation error: 0.75491
+2020-01-05 13:11:11.849685:Step 7000 (epoch 26), 7.2 s minibatch loss: 0.99978, validation error: 0.92487, test error: 0.92487, best validation error: 0.75491
+2020-01-05 13:11:19.451292:Model saved at: sample/sample_model
+2020-01-05 13:11:19.465050:Step 8000 (epoch 30), 7.2 s minibatch loss: 0.67765, validation error: 0.63210, test error: 0.63210, best validation error: 0.63210
+2020-01-05 13:11:26.871925:Step 9000 (epoch 34), 7.3 s minibatch loss: 0.69180, validation error: 0.63804, test error: 0.63804, best validation error: 0.63210
+2020-01-05 13:11:34.548858:Model saved at: sample/sample_model
+2020-01-05 13:11:34.563402:Step 10000 (epoch 38), 7.3 s minibatch loss: 0.67433, validation error: 0.57980, test error: 0.57980, best validation error: 0.57980
+2020-01-05 13:11:42.210597:Model saved at: sample/sample_model
+2020-01-05 13:11:42.224140:Step 11000 (epoch 42), 7.2 s minibatch loss: 0.72804, validation error: 0.51364, test error: 0.51364, best validation error: 0.51364
+2020-01-05 13:11:49.611373:Step 12000 (epoch 46), 7.3 s minibatch loss: 0.59106, validation error: 0.53329, test error: 0.53329, best validation error: 0.51364
+2020-01-05 13:11:56.889015:Step 13000 (epoch 50), 7.2 s minibatch loss: 0.49372, validation error: 0.68747, test error: 0.68747, best validation error: 0.51364
+2020-01-05 13:12:04.545488:Model saved at: sample/sample_model
+2020-01-05 13:12:04.559045:Step 14000 (epoch 53), 7.2 s minibatch loss: 0.46893, validation error: 0.45844, test error: 0.45844, best validation error: 0.45844
+2020-01-05 13:12:12.021904:Step 15000 (epoch 57), 7.4 s minibatch loss: 0.51304, validation error: 0.49300, test error: 0.49300, best validation error: 0.45844
+2020-01-05 13:12:19.290294:Step 16000 (epoch 61), 7.2 s minibatch loss: 0.52323, validation error: 0.91452, test error: 0.91452, best validation error: 0.45844
+2020-01-05 13:12:26.595277:Step 17000 (epoch 65), 7.2 s minibatch loss: 0.42265, validation error: 0.52640, test error: 0.52640, best validation error: 0.45844
+2020-01-05 13:12:34.061262:Step 18000 (epoch 69), 7.4 s minibatch loss: 0.35992, validation error: 0.56476, test error: 0.56476, best validation error: 0.45844
+2020-01-05 13:12:41.742472:Model saved at: sample/sample_model
+2020-01-05 13:12:41.756284:Step 19000 (epoch 73), 7.3 s minibatch loss: 0.42707, validation error: 0.32451, test error: 0.32451, best validation error: 0.32451
+2020-01-05 13:12:49.132308:Step 20000 (epoch 76), 7.3 s minibatch loss: 0.35523, validation error: 0.33201, test error: 0.33201, best validation error: 0.32451
+2020-01-05 13:12:56.454700:Step 21000 (epoch 80), 7.2 s minibatch loss: 0.58437, validation error: 0.48982, test error: 0.48982, best validation error: 0.32451
+2020-01-05 13:13:03.658249:Step 22000 (epoch 84), 7.1 s minibatch loss: 0.41638, validation error: 0.36570, test error: 0.36570, best validation error: 0.32451
+2020-01-05 13:13:11.495132:Model saved at: sample/sample_model
+2020-01-05 13:13:11.508793:Step 23000 (epoch 88), 7.4 s minibatch loss: 0.40327, validation error: 0.31615, test error: 0.31615, best validation error: 0.31615
+2020-01-05 13:13:19.014867:Step 24000 (epoch 92), 7.4 s minibatch loss: 0.29949, validation error: 0.36118, test error: 0.36118, best validation error: 0.31615
+2020-01-05 13:13:26.390559:Step 25000 (epoch 96), 7.3 s minibatch loss: 0.38013, validation error: 0.34667, test error: 0.34667, best validation error: 0.31615
+2020-01-05 13:13:34.240159:Model saved at: sample/sample_model
+2020-01-05 13:13:34.253618:Step 26000 (epoch 100), 7.4 s minibatch loss: 0.25663, validation error: 0.29948, test error: 0.29948, best validation error: 0.29948
+2020-01-05 13:13:42.078023:Model saved at: sample/sample_model
+2020-01-05 13:13:42.091766:Step 27000 (epoch 103), 7.4 s minibatch loss: 0.33242, validation error: 0.26472, test error: 0.26472, best validation error: 0.26472
+2020-01-05 13:13:49.891922:Model saved at: sample/sample_model
+2020-01-05 13:13:49.905490:Step 28000 (epoch 107), 7.4 s minibatch loss: 0.22334, validation error: 0.24719, test error: 0.24719, best validation error: 0.24719
+2020-01-05 13:13:57.202785:Step 29000 (epoch 111), 7.2 s minibatch loss: 0.32266, validation error: 0.28534, test error: 0.28534, best validation error: 0.24719
+2020-01-05 13:14:04.666912:Step 30000 (epoch 115), 7.4 s minibatch loss: 0.26557, validation error: 0.27108, test error: 0.27108, best validation error: 0.24719
+2020-01-05 13:14:12.337630:Model saved at: sample/sample_model
+2020-01-05 13:14:12.351285:Step 31000 (epoch 119), 7.3 s minibatch loss: 0.29933, validation error: 0.22349, test error: 0.22349, best validation error: 0.22349
+2020-01-05 13:14:20.316623:Model saved at: sample/sample_model
+2020-01-05 13:14:20.329382:Step 32000 (epoch 123), 7.4 s minibatch loss: 0.30307, validation error: 0.21676, test error: 0.21676, best validation error: 0.21676
+2020-01-05 13:14:27.639687:Step 33000 (epoch 126), 7.2 s minibatch loss: 0.22920, validation error: 0.23813, test error: 0.23813, best validation error: 0.21676
+2020-01-05 13:14:34.895501:Step 34000 (epoch 130), 7.2 s minibatch loss: 0.18760, validation error: 0.24087, test error: 0.24087, best validation error: 0.21676
+2020-01-05 13:14:42.224874:Step 35000 (epoch 134), 7.3 s minibatch loss: 0.17228, validation error: 0.23411, test error: 0.23411, best validation error: 0.21676
+2020-01-05 13:14:49.581759:Step 36000 (epoch 138), 7.3 s minibatch loss: 0.17314, validation error: 0.21930, test error: 0.21930, best validation error: 0.21676
+2020-01-05 13:14:56.999418:Step 37000 (epoch 142), 7.4 s minibatch loss: 0.20145, validation error: 0.24288, test error: 0.24288, best validation error: 0.21676
+2020-01-05 13:15:04.240677:Step 38000 (epoch 146), 7.2 s minibatch loss: 0.24217, validation error: 0.24263, test error: 0.24263, best validation error: 0.21676
+2020-01-05 13:15:11.524403:Step 39000 (epoch 150), 7.2 s minibatch loss: 0.18728, validation error: 0.25677, test error: 0.25677, best validation error: 0.21676
+2020-01-05 13:15:19.211101:Model saved at: sample/sample_model
+2020-01-05 13:15:19.224624:Step 40000 (epoch 153), 7.3 s minibatch loss: 0.23744, validation error: 0.20895, test error: 0.20895, best validation error: 0.20895
+2020-01-05 13:15:26.855062:Model saved at: sample/sample_model
+2020-01-05 13:15:26.868578:Step 41000 (epoch 157), 7.2 s minibatch loss: 0.19595, validation error: 0.20047, test error: 0.20047, best validation error: 0.20047
+2020-01-05 13:15:34.216229:Step 42000 (epoch 161), 7.3 s minibatch loss: 0.20014, validation error: 0.22624, test error: 0.22624, best validation error: 0.20047
+2020-01-05 13:15:41.516651:Step 43000 (epoch 165), 7.2 s minibatch loss: 0.25350, validation error: 0.24075, test error: 0.24075, best validation error: 0.20047
+2020-01-05 13:15:48.864451:Step 44000 (epoch 169), 7.3 s minibatch loss: 0.17913, validation error: 0.24044, test error: 0.24044, best validation error: 0.20047
+2020-01-05 13:15:56.328159:Step 45000 (epoch 173), 7.4 s minibatch loss: 0.13339, validation error: 0.22104, test error: 0.22104, best validation error: 0.20047
+2020-01-05 13:16:04.021086:Model saved at: sample/sample_model
+2020-01-05 13:16:04.034186:Step 46000 (epoch 177), 7.2 s minibatch loss: 0.17168, validation error: 0.19061, test error: 0.19061, best validation error: 0.19061
+2020-01-05 13:16:11.339842:Step 47000 (epoch 180), 7.2 s minibatch loss: 0.15055, validation error: 0.20481, test error: 0.20481, best validation error: 0.19061
+2020-01-05 13:16:18.665600:Step 48000 (epoch 184), 7.2 s minibatch loss: 0.28442, validation error: 0.24646, test error: 0.24646, best validation error: 0.19061
+2020-01-05 13:16:25.979013:Step 49000 (epoch 188), 7.2 s minibatch loss: 0.20738, validation error: 0.19964, test error: 0.19964, best validation error: 0.19061
+2020-01-05 13:16:33.416364:Step 50000 (epoch 192), 7.4 s minibatch loss: 0.25112, validation error: 0.19103, test error: 0.19103, best validation error: 0.19061
+2020-01-05 13:16:40.810910:Step 51000 (epoch 196), 7.3 s minibatch loss: 0.22150, validation error: 0.21757, test error: 0.21757, best validation error: 0.19061
+2020-01-05 13:16:48.229965:Step 52000 (epoch 200), 7.3 s minibatch loss: 0.22299, validation error: 0.22972, test error: 0.22972, best validation error: 0.19061
+2020-01-05 13:16:55.885189:Model saved at: sample/sample_model
+2020-01-05 13:16:55.898921:Step 53000 (epoch 203), 7.2 s minibatch loss: 0.13725, validation error: 0.17523, test error: 0.17523, best validation error: 0.17523
+2020-01-05 13:17:03.262687:Step 54000 (epoch 207), 7.3 s minibatch loss: 0.21689, validation error: 0.18262, test error: 0.18262, best validation error: 0.17523
+2020-01-05 13:17:10.540890:Step 55000 (epoch 211), 7.2 s minibatch loss: 0.19485, validation error: 0.17685, test error: 0.17685, best validation error: 0.17523
+2020-01-05 13:17:17.726121:Step 56000 (epoch 215), 7.1 s minibatch loss: 0.16191, validation error: 0.19105, test error: 0.19105, best validation error: 0.17523
+2020-01-05 13:17:25.050951:Step 57000 (epoch 219), 7.3 s minibatch loss: 0.15279, validation error: 0.18443, test error: 0.18443, best validation error: 0.17523
+2020-01-05 13:17:32.779416:Model saved at: sample/sample_model
+2020-01-05 13:17:32.793012:Step 58000 (epoch 223), 7.3 s minibatch loss: 0.12987, validation error: 0.17397, test error: 0.17397, best validation error: 0.17397
+2020-01-05 13:17:40.085516:Step 59000 (epoch 227), 7.2 s minibatch loss: 0.11935, validation error: 0.19921, test error: 0.19921, best validation error: 0.17397
+2020-01-05 13:17:47.683414:Model saved at: sample/sample_model
+2020-01-05 13:17:47.696945:Step 60000 (epoch 230), 7.2 s minibatch loss: 0.19583, validation error: 0.16956, test error: 0.16956, best validation error: 0.16956
+2020-01-05 13:17:55.096574:Step 61000 (epoch 234), 7.3 s minibatch loss: 0.19540, validation error: 0.20139, test error: 0.20139, best validation error: 0.16956
+2020-01-05 13:18:02.418331:Step 62000 (epoch 238), 7.2 s minibatch loss: 0.10280, validation error: 0.17084, test error: 0.17084, best validation error: 0.16956
+2020-01-05 13:18:09.808647:Step 63000 (epoch 242), 7.3 s minibatch loss: 0.21276, validation error: 0.16964, test error: 0.16964, best validation error: 0.16956
+2020-01-05 13:18:17.170267:Step 64000 (epoch 246), 7.3 s minibatch loss: 0.14937, validation error: 0.17976, test error: 0.17976, best validation error: 0.16956
+2020-01-05 13:18:24.966311:Model saved at: sample/sample_model
+2020-01-05 13:18:24.979690:Step 65000 (epoch 250), 7.3 s minibatch loss: 0.13797, validation error: 0.15984, test error: 0.15984, best validation error: 0.15984
+2020-01-05 13:18:32.358375:Step 66000 (epoch 253), 7.3 s minibatch loss: 0.14796, validation error: 0.17126, test error: 0.17126, best validation error: 0.15984
+2020-01-05 13:18:39.860665:Step 67000 (epoch 257), 7.4 s minibatch loss: 0.12658, validation error: 0.17383, test error: 0.17383, best validation error: 0.15984
+2020-01-05 13:18:47.387799:Step 68000 (epoch 261), 7.5 s minibatch loss: 0.18162, validation error: 0.19389, test error: 0.19389, best validation error: 0.15984
+2020-01-05 13:18:54.567498:Step 69000 (epoch 265), 7.1 s minibatch loss: 0.18794, validation error: 0.17134, test error: 0.17134, best validation error: 0.15984
+2020-01-05 13:19:01.899025:Step 70000 (epoch 269), 7.2 s minibatch loss: 0.10524, validation error: 0.16560, test error: 0.16560, best validation error: 0.15984
+2020-01-05 13:19:09.256529:Step 71000 (epoch 273), 7.3 s minibatch loss: 0.10760, validation error: 0.16090, test error: 0.16090, best validation error: 0.15984
+2020-01-05 13:19:16.567079:Step 72000 (epoch 277), 7.3 s minibatch loss: 0.14321, validation error: 0.16180, test error: 0.16180, best validation error: 0.15984
+2020-01-05 13:19:23.921254:Step 73000 (epoch 280), 7.3 s minibatch loss: 0.10010, validation error: 0.20680, test error: 0.20680, best validation error: 0.15984
+2020-01-05 13:19:31.233114:Step 74000 (epoch 284), 7.2 s minibatch loss: 0.12132, validation error: 0.16696, test error: 0.16696, best validation error: 0.15984
+2020-01-05 13:19:38.620467:Step 75000 (epoch 288), 7.3 s minibatch loss: 0.13686, validation error: 0.16061, test error: 0.16061, best validation error: 0.15984
+2020-01-05 13:19:46.220703:Model saved at: sample/sample_model
+2020-01-05 13:19:46.234220:Step 76000 (epoch 292), 7.2 s minibatch loss: 0.12183, validation error: 0.15949, test error: 0.15949, best validation error: 0.15949
+2020-01-05 13:19:53.536295:Step 77000 (epoch 296), 7.2 s minibatch loss: 0.12516, validation error: 0.16192, test error: 0.16192, best validation error: 0.15949
+2020-01-05 13:20:00.860710:Step 78000 (epoch 300), 7.3 s minibatch loss: 0.14297, validation error: 0.16048, test error: 0.16048, best validation error: 0.15949
+2020-01-05 13:20:08.520069:Model saved at: sample/sample_model
+2020-01-05 13:20:08.533406:Step 79000 (epoch 303), 7.2 s minibatch loss: 0.09963, validation error: 0.15743, test error: 0.15743, best validation error: 0.15743
+2020-01-05 13:20:15.786144:Step 80000 (epoch 307), 7.2 s minibatch loss: 0.13566, validation error: 0.15902, test error: 0.15902, best validation error: 0.15743
+2020-01-05 13:20:23.129476:Step 81000 (epoch 311), 7.3 s minibatch loss: 0.08916, validation error: 0.15900, test error: 0.15900, best validation error: 0.15743
+2020-01-05 13:20:30.497658:Step 82000 (epoch 315), 7.3 s minibatch loss: 0.10972, validation error: 0.16883, test error: 0.16883, best validation error: 0.15743
+2020-01-05 13:20:38.027108:Step 83000 (epoch 319), 7.4 s minibatch loss: 0.12683, validation error: 0.17384, test error: 0.17384, best validation error: 0.15743
+2020-01-05 13:20:45.712508:Model saved at: sample/sample_model
+2020-01-05 13:20:45.726241:Step 84000 (epoch 323), 7.3 s minibatch loss: 0.10089, validation error: 0.15482, test error: 0.15482, best validation error: 0.15482
+2020-01-05 13:20:53.069110:Step 85000 (epoch 327), 7.3 s minibatch loss: 0.08847, validation error: 0.15724, test error: 0.15724, best validation error: 0.15482
+2020-01-05 13:21:00.339945:Step 86000 (epoch 330), 7.2 s minibatch loss: 0.15044, validation error: 0.17249, test error: 0.17249, best validation error: 0.15482
+2020-01-05 13:21:07.684129:Step 87000 (epoch 334), 7.3 s minibatch loss: 0.10311, validation error: 0.15957, test error: 0.15957, best validation error: 0.15482
+2020-01-05 13:21:14.956732:Step 88000 (epoch 338), 7.2 s minibatch loss: 0.21305, validation error: 0.17203, test error: 0.17203, best validation error: 0.15482
+2020-01-05 13:21:22.779416:Model saved at: sample/sample_model
+2020-01-05 13:21:22.792793:Step 89000 (epoch 342), 7.3 s minibatch loss: 0.12548, validation error: 0.15366, test error: 0.15366, best validation error: 0.15366
+2020-01-05 13:21:30.179022:Step 90000 (epoch 346), 7.3 s minibatch loss: 0.07233, validation error: 0.17071, test error: 0.17071, best validation error: 0.15366
+2020-01-05 13:21:37.485192:Step 91000 (epoch 350), 7.2 s minibatch loss: 0.19025, validation error: 0.16812, test error: 0.16812, best validation error: 0.15366
+2020-01-05 13:21:44.782638:Step 92000 (epoch 354), 7.2 s minibatch loss: 0.12026, validation error: 0.16887, test error: 0.16887, best validation error: 0.15366
+2020-01-05 13:21:52.215794:Step 93000 (epoch 357), 7.4 s minibatch loss: 0.10981, validation error: 0.16455, test error: 0.16455, best validation error: 0.15366
+2020-01-05 13:21:59.457511:Step 94000 (epoch 361), 7.2 s minibatch loss: 0.09024, validation error: 0.15443, test error: 0.15443, best validation error: 0.15366
+2020-01-05 13:22:06.706910:Step 95000 (epoch 365), 7.2 s minibatch loss: 0.08679, validation error: 0.16398, test error: 0.16398, best validation error: 0.15366
+2020-01-05 13:22:14.460109:Model saved at: sample/sample_model
+2020-01-05 13:22:14.473734:Step 96000 (epoch 369), 7.4 s minibatch loss: 0.08242, validation error: 0.14745, test error: 0.14745, best validation error: 0.14745
+2020-01-05 13:22:21.779558:Step 97000 (epoch 373), 7.2 s minibatch loss: 0.11635, validation error: 0.16460, test error: 0.16460, best validation error: 0.14745
+2020-01-05 13:22:29.634335:Model saved at: sample/sample_model
+2020-01-05 13:22:29.647829:Step 98000 (epoch 377), 7.4 s minibatch loss: 0.15103, validation error: 0.14175, test error: 0.14175, best validation error: 0.14175
+2020-01-05 13:22:36.965445:Step 99000 (epoch 380), 7.3 s minibatch loss: 0.10027, validation error: 0.14444, test error: 0.14444, best validation error: 0.14175
+2020-01-05 13:22:43.889474:Step 100000 (epoch 384), 6.9 s minibatch loss: 0.12613, validation error: 0.15814, test error: 0.15814, best validation error: 0.14175
+2020-01-05 13:22:51.247089:Step 101000 (epoch 388), 7.3 s minibatch loss: 0.14590, validation error: 0.16104, test error: 0.16104, best validation error: 0.14175
+2020-01-05 13:22:58.667215:Step 102000 (epoch 392), 7.3 s minibatch loss: 0.12415, validation error: 0.15760, test error: 0.15760, best validation error: 0.14175
+2020-01-05 13:23:05.949976:Step 103000 (epoch 396), 7.2 s minibatch loss: 0.10697, validation error: 0.15626, test error: 0.15626, best validation error: 0.14175
+2020-01-05 13:23:13.285708:Step 104000 (epoch 400), 7.3 s minibatch loss: 0.15008, validation error: 0.15825, test error: 0.15825, best validation error: 0.14175
+2020-01-05 13:23:20.684224:Step 105000 (epoch 404), 7.3 s minibatch loss: 0.07586, validation error: 0.14627, test error: 0.14627, best validation error: 0.14175
+2020-01-05 13:23:28.124502:Step 106000 (epoch 407), 7.4 s minibatch loss: 0.17504, validation error: 0.15073, test error: 0.15073, best validation error: 0.14175
+2020-01-05 13:23:36.009966:Model saved at: sample/sample_model
+2020-01-05 13:23:36.023738:Step 107000 (epoch 411), 7.3 s minibatch loss: 0.10511, validation error: 0.13979, test error: 0.13979, best validation error: 0.13979
+2020-01-05 13:23:43.469380:Step 108000 (epoch 415), 7.4 s minibatch loss: 0.13355, validation error: 0.15575, test error: 0.15575, best validation error: 0.13979
+2020-01-05 13:23:50.720715:Step 109000 (epoch 419), 7.2 s minibatch loss: 0.07075, validation error: 0.16400, test error: 0.16400, best validation error: 0.13979
+2020-01-05 13:23:57.920018:Step 110000 (epoch 423), 7.1 s minibatch loss: 0.08831, validation error: 0.16655, test error: 0.16655, best validation error: 0.13979
+2020-01-05 13:24:05.247481:Step 111000 (epoch 427), 7.3 s minibatch loss: 0.11856, validation error: 0.15634, test error: 0.15634, best validation error: 0.13979
+2020-01-05 13:24:12.574088:Step 112000 (epoch 430), 7.3 s minibatch loss: 0.10619, validation error: 0.15593, test error: 0.15593, best validation error: 0.13979
+2020-01-05 13:24:19.897512:Step 113000 (epoch 434), 7.3 s minibatch loss: 0.12438, validation error: 0.14933, test error: 0.14933, best validation error: 0.13979
+2020-01-05 13:24:27.229916:Step 114000 (epoch 438), 7.3 s minibatch loss: 0.07962, validation error: 0.15968, test error: 0.15968, best validation error: 0.13979
+2020-01-05 13:24:34.456670:Step 115000 (epoch 442), 7.1 s minibatch loss: 0.11876, validation error: 0.14481, test error: 0.14481, best validation error: 0.13979
+2020-01-05 13:24:41.821830:Step 116000 (epoch 446), 7.3 s minibatch loss: 0.09605, validation error: 0.15621, test error: 0.15621, best validation error: 0.13979
+2020-01-05 13:24:49.129122:Step 117000 (epoch 450), 7.2 s minibatch loss: 0.08848, validation error: 0.19105, test error: 0.19105, best validation error: 0.13979
+2020-01-05 13:24:56.489187:Step 118000 (epoch 454), 7.3 s minibatch loss: 0.10253, validation error: 0.15598, test error: 0.15598, best validation error: 0.13979
+2020-01-05 13:25:03.863259:Step 119000 (epoch 457), 7.3 s minibatch loss: 0.12089, validation error: 0.16728, test error: 0.16728, best validation error: 0.13979
+2020-01-05 13:25:11.265456:Step 120000 (epoch 461), 7.3 s minibatch loss: 0.07353, validation error: 0.14940, test error: 0.14940, best validation error: 0.13979
+2020-01-05 13:25:18.703684:Step 121000 (epoch 465), 7.4 s minibatch loss: 0.05673, validation error: 0.14499, test error: 0.14499, best validation error: 0.13979
+2020-01-05 13:25:26.264553:Step 122000 (epoch 469), 7.5 s minibatch loss: 0.07926, validation error: 0.17103, test error: 0.17103, best validation error: 0.13979
