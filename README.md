@@ -11,7 +11,7 @@ IRNet is a general purpose deep residual regression framework that contains mode
 
 The basic requirement for re-using these environments are a Python 3 Jupyter environment with the packages listed in `requirements.txt`.
 
-## Contents
+## Source Files
 
 * `data_preprocess.ipynb`: Jupyter notebook that illustrates how to preprocess data for model training. It uses the oqmd-c.csv dataset (OQMD-C from paper) as sample, other datasets are pubicly available from OQMD and the Materials Project websites, and can be similarly preprocessed. Please run this with the respective data file to create the training and test/validation sets before running the model if you want to use physical attributes as the model input. The models can be trained using any vector input and a regression output.
 
@@ -28,6 +28,8 @@ The basic requirement for re-using these environments are a Python 3 Jupyter env
 You can simply run the code by passing a sample config file to the dl_regressors.py as follows:
 
 `python dl_regressors.py --config_file sample/sample-run.config`
+
+The sample output from running the above command is provided inside the `sample` folder.
 
 The config file defines the loss_type, training_data_path, test_data_path, label, and other runtime parameters used in this work. Please look at the sample config file 'sample/sample-run.config' for more details. Note that model architectures are defined using 'architecture' key in the config file. Here are the architecture key value pairs for different types of model architectures:
 
@@ -53,9 +55,9 @@ The config file defines the loss_type, training_data_path, test_data_path, label
 
 The code was developed by Dipendra Jha from the <a href="http://cucis.ece.northwestern.edu/">CUCIS</a> group at the Electrical and Computer Engineering Department at Northwestern University.
 
-## Citation
+## Publications
 
-D. Jha, L. Ward, Z. Yang, C. Wovertong, I. Foster, W.-keng Liao, A. Choudhary, and A. Agrawal, "IRNet: A general purpose deep residual regression framework for materials discovery." Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 2019 [DOI:10.1145/3292500.3330703] [<a href="http://delivery.acm.org/10.1145/3340000/3330703/p2385-jha.pdf">PDF</a>].
+Dipendra Jha, Logan Ward, Zijiang Yang, Chris Wovertong, Ian Foster, Wei-keng Liao, Alok Choudhary, and Ankit Agrawal, "IRNet: A general purpose deep residual regression framework for materials discovery." Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 2019 [DOI:10.1145/3292500.3330703] [<a href="http://delivery.acm.org/10.1145/3340000/3330703/p2385-jha.pdf">PDF</a>].
 
 
 ## Questions/Comments
