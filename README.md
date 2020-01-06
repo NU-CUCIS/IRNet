@@ -13,15 +13,15 @@ The basic requirement for re-using these environments are a Python 3 Jupyter env
 
 ## Contents
 
-* data_preprocess.ipynb: Jupyter notebook that illustrates how to preprocess data for model training. It uses the oqmd-c.csv dataset (OQMD-C from paper) as sample, other datasets are pubicly available from OQMD and the Materials Project websites, and can be similarly preprocessed. Please run this with the respective data file to create the training and test/validation sets before running the model if you want to use physical attributes as the model input. The models can be trained using any vector input and a regression output.
+* `data_preprocess.ipynb`: Jupyter notebook that illustrates how to preprocess data for model training. It uses the oqmd-c.csv dataset (OQMD-C from paper) as sample, other datasets are pubicly available from OQMD and the Materials Project websites, and can be similarly preprocessed. Please run this with the respective data file to create the training and test/validation sets before running the model if you want to use physical attributes as the model input. The models can be trained using any vector input and a regression output.
 
-* dl_regressors.py: Code to run any model for training.
+* `dl_regressors.py`: Code to run any model for training.
 
-* data_utils.py: Utility code for data loading.
+* `data_utils.py`: Utility code for data loading.
 
-* train_utils.py: Utility code for training the model.
+* `train_utils.py`: Utility code for training the model.
 
-* sample: A sample run folder that contains running configuration and a 17-layered IRNet trained using random split of a subset from oqmd-c.csv in training-data folder.
+* `sample`: A sample run folder that contains running configuration and a 17-layered IRNet trained using random split of a subset from oqmd-c.csv in training-data folder.
 
 ## Running the code
 
