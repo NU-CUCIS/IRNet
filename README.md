@@ -21,7 +21,7 @@ The basic requirement for re-using these environments are a Python 3 Jupyter env
 
 * `train_utils.py`: Utility code for training the model.
 
-* `sample`: A sample run folder that contains running configuration and a 17-layered IRNet trained using random split of a subset from oqmd-c.csv in training-data folder.
+* `sample`: A sample run folder that contains running configuration and a 17-layered IRNet model trained using random split of a subset from `oqmd-c.csv` in `training-data` folder.
 
 ## Running the code
 
@@ -29,7 +29,7 @@ You can simply run the code by passing a sample config file to the dl_regressors
 
 `python dl_regressors.py --config_file sample/sample-run.config`
 
-The sample output from running the above command is provided inside the `sample` folder.
+The sample output from running the above command is provided in the `sample/sample.log` file.
 
 The config file defines the loss_type, training_data_path, test_data_path, label, and other runtime parameters used in this work. Please look at the sample config file 'sample/sample-run.config' for more details. Note that model architectures are defined using 'architecture' key in the config file. Here are the architecture key value pairs for different types of model architectures:
 
