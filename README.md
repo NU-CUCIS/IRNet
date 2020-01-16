@@ -9,7 +9,7 @@ IRNet is a general purpose deep residual regression framework that contains mode
 
 ## Installation Requirements
 
-The basic requirement for re-using these environments are a Python 3 Jupyter environment with the packages listed in `requirements.txt`.
+The basic requirement for re-using these environments are a Python 3.6.3 Jupyter environment with the packages listed in `requirements.txt`.
 
 ## Source Files
 
