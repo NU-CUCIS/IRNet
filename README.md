@@ -52,10 +52,10 @@ The config file defines the loss_type, training_data_path, test_data_path, label
 * 48-layered IRNet: '1024BARx4-1024BARx4-512BARx4-512BARx4-256BARx4-256BARx4-128BARx4-128BARx4-64BARx4-64BARx4-32BARx4-16BARx3-1'.
 
 * Extra files:
-  + [sample/sample_model.data-00000-of-00001](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/sample/sample_model.data-00000-of-00001) (64 MB).
-  + [training-data/oqmd-c.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/oqmd-c.csv) (49 MB).
-  + [training-data/sample_train_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_train_set.csv) (9.3 MB).
-  + [training-data/sample_test_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_test_set.csv) (1.1 MB).
+  + [sample/sample_model.data-00000-of-00001](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/sample/sample_model.data-00000-of-00001) (64 MB)- part of model trained using the sample command above.
+  + [training-data/oqmd-c.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/oqmd-c.csv) (49 MB)- dataset used as sample in `data_preprocess.ipynb`.
+  + [training-data/sample_train_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_train_set.csv) (9.3 MB)- training dataset for model training using the sample command above.
+  + [training-data/sample_test_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_test_set.csv) (1.1 MB)- validation/test set for model training using the sample command above.
 
 ## Developer Team
 
