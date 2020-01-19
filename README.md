@@ -51,6 +51,12 @@ The config file defines the loss_type, training_data_path, test_data_path, label
 
 * 48-layered IRNet: '1024BARx4-1024BARx4-512BARx4-512BARx4-256BARx4-256BARx4-128BARx4-128BARx4-64BARx4-64BARx4-32BARx4-16BARx3-1'.
 
+* Extra files:
+  + [sample/sample_model.data-00000-of-00001](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/sample/sample_model.data-00000-of-00001) (64 MB).
+  + [training-data/oqmd-c.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/oqmd-c.csv) (49 MB).
+  + [training-data/sample_train_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_train_set.csv) (9.3 MB).
+  + [training-data/sample_test_set.csv](http://cucis.ece.northwestern.edu/projects/DataSets/IRNet/training-data/sample_test_set.csv) (1.1 MB).
+
 ## Developer Team
 
 The code was developed by Dipendra Jha from the <a href="http://cucis.ece.northwestern.edu/">CUCIS</a> group at the Electrical and Computer Engineering Department at Northwestern University.
